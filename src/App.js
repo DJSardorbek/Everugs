@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {BrowserRouter} from 'react-router-dom';
 import './App.css';
+import EvaMats from './components/EvaMats';
+import Feedback from './components/Feedback';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import MyModal from './components/modal/MyModal';
+import Navbar from './components/Navbar';
+export const ModalContext = React.createContext(null);
 
 function App() {
+  const [modal, setModal] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ModalContext.Provider value={{modal, setModal}}>
+      <div className="App">
+      <BrowserRouter>
+        <Navbar/>
+        <Header/>
+        <EvaMats/>
+        <Feedback/>
+        <Footer/>
+        <MyModal/>
+      </BrowserRouter>
     </div>
+    </ModalContext.Provider>
   );
 }
 

@@ -1,0 +1,132 @@
+.header {
+    margin-top: 70px;
+    padding-top: 20px;
+    position: relative;
+}
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.header-title .title-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.header-title .title-logo .title-logo-text {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 32px;
+}
+.header-title .title-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+.header-title .title-nav .nav-item {
+    font-size: 16px;
+    font-weight: 300;
+    color: #737373;
+    text-decoration: none;
+}
+.header-title .title-nav .nav-item:hover {
+    opacity: .7;
+}
+.header-content {
+    background: url('../../public/images/header-bg.png') no-repeat;
+    background-position: top right;
+    background-size: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+}
+.header-content .left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 16px;
+    width: 50%;
+    margin-top: -50px;
+}   
+.left-content h4{
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 42px;
+    max-width: 500px;
+}
+.left-content p {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: -8px;
+}
+.right-content {
+    margin-top: -50px;
+    text-align: center;
+    width: 50%;
+    max-width: 360px;
+    max-height: 460px;
+    transform: translateX(-72px)
+}
+.right-content img {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width:576px) {
+    
+    .header-title {
+        justify-content: center;
+        padding-top: 10px;
+    }
+    .header-title .title-logo img {
+        width: 60px;
+        height: 39px;
+    }
+    .header-title .title-logo .title-logo-text  {
+        font-size: 18px;
+    }
+    .header-content {
+        background-position: center;
+        background-size: 250px!important;
+        justify-content: center;
+    }
+    .header-content .left-content {
+        margin-top: 0px;
+        align-items: center
+    }
+    .left-content h4 {
+        font-size: 25px!important;
+        line-height: 25px!important;
+        text-align: center!important;
+    }
+    .right-content {
+        display: none;
+    }
+    .btn {
+        font-size: 10px!important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-title .title-nav {
+        display: none;
+    }
+    .right-content {
+        transform: translateX(0);
+    }
+    .header-content {
+        background-size: 350px;
+    }
+    .left-content h4 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .btn {
+        font-size: 14px;
+    }
+}

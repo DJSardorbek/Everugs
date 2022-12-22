@@ -1,0 +1,93 @@
+.eva-mats {
+    position: relative;
+    padding-top: 60px;
+}
+.eva-mats .mats-title {
+    font-weight: 400;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.mats-title span {
+    background: linear-gradient(180deg, rgba(185, 1, 96, 1) 0%, rgba(61, 91, 245, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.mats-content {
+    background: url('../../public/images/main-bg.png') no-repeat;
+    background-size: 600px;
+    background-position: top left;
+    padding-bottom: 200px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.mats-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+.mats-card-container .card {
+    width: 300px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.card .card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0px 0px;
+}
+.card-content {
+    padding: 20px;
+    background: #fff;
+    border-radius: 0px 0px 8px 8px;
+
+}
+.card-content .card-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.card-content .card-desc {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #767676;
+}
+
+@media only screen and (max-width: 576px) {
+    .mats-content {
+        /* width: 90%!important; */
+        background-size: 0px!important;
+    }
+    .eva-mats .mats-title {
+        font-size: 24px!important;
+    }
+    .mats-card-container .card {
+
+        min-width: 240px!important;
+        width: 90%!important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mats-content {
+        background-size: 500px;
+    }
+    .eva-mats .mats-title {
+        font-size: 36px;
+    }
+    .card-content .card-title {
+        font-size: 24px;
+    }
+}
